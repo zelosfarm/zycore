@@ -1,0 +1,9 @@
+.{
+    .name = "zycore",
+    .version = "1.4.1",
+    .paths = .{
+        "src",
+        "include",
+    },
+    .dependencies = .{},
+}

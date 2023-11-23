@@ -98,3 +98,6 @@ doc/html
 /.vscode
 /.idea
 /cmake-build-*
+
+/zig-out
+/zig-cache
