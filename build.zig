@@ -12,6 +12,12 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+    zycore.want_lto = false;
+    zycore.disable_sanitize_c = true;
+    if (optimize == .Debug or optimize == .ReleaseSafe)
+        zycore.bundle_compiler_rt = true
+    else
+        zycore.strip = true;
     zycore.linkLibC();
     zycore.addIncludePath(.{ .path = "include" });
     zycore.addIncludePath(.{ .path = "src" });
